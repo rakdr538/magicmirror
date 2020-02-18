@@ -1,0 +1,42 @@
+html, body {
+  height: 100%;
+}
+
+header,footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  background-color: black;
+  font-family: "Arial Black", Helvetica, sans-serif;
+  color: #fff;
+  width: 95%;
+  vertical-align: middle;
+  margin: 40px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  color: #444;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 100%;
+}
+
+li {
+  font-size: 100%;
+}
+
+#current_dateandtime {
+  background-color: black;
+  text-align: center;
+}

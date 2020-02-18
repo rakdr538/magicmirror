@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" http-equiv="refresh" content="60">
+  <title>Magic Mirror App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="newsfeed.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Magic Mirror App!!!</h1>
+  </header>
+
+  <section>
+    <div class="wrapper">
+      <div class="box Time_Date" id="current_dateandtime">
+        <p id="current_time" style="font-size:200%"></p><br>
+        <p id="current_date" style="font-size:200%"></p><br>
+        <p id="current_weekday" style="font-size:200%"></p>
+      </div>
+      <script>
+        // Current Date
+        date = today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate();
+        setDate(date);
+        document.getElementById("current_date").innerHTML = date;
+        // Current Time
+        var time = today.getHours() + ":" + today.getMinutes();
+        document.getElementById("current_time").innerHTML = time;
+        var weekday = days[ today.getDay() ];
+        document.getElementById("current_weekday").innerHTML = weekday;
+      </script>
+      <div class="box Bloomberg_News_Feed" id="Bloomberg_News_Feed">
+        <p id="news_title" style="font-size:200%">Bloomberg News</p>
+        <script>fetchBloombergNews();</script>
+      </div>
+      <div class="box Cricket_News" id="Cricket_News">
+        <p id="news_title" style="font-size:200%">Indian Cricket</p>
+        <script>fetchIndCricketNews();</script>
+      </div>
+      </div>
+      <div class="box BBC_News_Feed" id="BBC_News_Feed">
+        <p id="news_title" style="font-size:200%">BBC News</p>
+        <script>fetchBbcNews();</script>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2020 Rakesh Dronamraj. All rights reserved.</p>
+  </footer>
+</body>
+</html>
